@@ -66,7 +66,7 @@ public final class EncryptionKeyResponseHandler implements
         try {
             rsaCipher.init(Cipher.DECRYPT_MODE, privateKey);
             sharedSecret = new SecretKeySpec(rsaCipher.doFinal(message.getSharedSecret()),
-                "AES"); // NON-NLS
+                "AES/GCM/NoPadding"); // NON-NLS
         } catch (Exception ex) {
             ConsoleMessages.Warn.Crypt.BAD_SHARED_SECRET.log(ex);
             session.disconnect(GlowstoneMessages.Kick.Crypt.SHARED_SECRET.get());
