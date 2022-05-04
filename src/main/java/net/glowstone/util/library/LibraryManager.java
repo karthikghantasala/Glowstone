@@ -106,7 +106,7 @@ public final class LibraryManager {
         /**
          * The SHA-1 hash algorithm.
          */
-        SHA1(Hashing.sha1(), "sha1"),
+        SHA256(Hashing.sha256(), "sha256"),
         /**
          * The MD5 hash algorithm.
          */
