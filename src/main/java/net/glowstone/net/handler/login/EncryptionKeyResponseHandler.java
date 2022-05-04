@@ -85,7 +85,7 @@ public final class EncryptionKeyResponseHandler implements
         }
 
         // check verify token
-        if (!Arrays.equals(verifyToken, session.getVerifyToken())) {
+        if (!MessageDigest.isEqual(verifyToken, session.getVerifyToken())) {
             session.disconnect(GlowstoneMessages.Kick.Crypt.VERIFY_TOKEN.get());
             return;
         }
