@@ -110,7 +110,7 @@ public final class LibraryManager {
         /**
          * The MD5 hash algorithm.
          */
-        MD5(Hashing.md5(), "sha256");
+        MD5(Hashing.sha256(), "sha256");
 
         private static final Map<String, HashAlgorithm> BY_NAME = Maps.newHashMap();
 
