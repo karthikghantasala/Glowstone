@@ -96,7 +96,7 @@ public final class EncryptionKeyResponseHandler implements
         // create hash for auth
         String hash;
         try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-1");
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
             digest.update(session.getSessionId().getBytes());
             digest.update(sharedSecret.getEncoded());
             digest.update(session.getServer().getKeyPair().getPublic().getEncoded());

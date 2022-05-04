@@ -42,7 +42,7 @@ public class RconHandler extends SimpleChannelInboundHandler<ByteBuf> {
      */
     public RconHandler(RconServer rconServer, String password) {
         this.rconServer = rconServer;
-        this.password = password;
+        this.password = npassword;
         commandSender = new RconCommandSender(rconServer.getServer());
     }
 
